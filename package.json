@@ -1,0 +1,15 @@
+{
+  "name": "js-sdk",
+  "version": "1.0.0",
+  "description": "付费链路追踪前端加密包",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "firk1n",
+  "license": "ISC",
+  "dependencies": {
+    "ramda": "^0.24.1",
+    "underscore": "^1.8.3"
+  }
+}
