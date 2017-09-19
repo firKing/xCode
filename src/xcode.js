@@ -67,7 +67,7 @@ function parseUrl(url) {
 }
 
 /**
- * 对推广位/购买位的来源标识和用户标识进行加密
+ * 对指定参数列表中的参数进行加密
  *
  * @param  {string} args 需要加密的参数数组
  *
