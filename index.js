@@ -1,7 +1,0 @@
-/**
- * @file
- * @author
- */
-module.exports = {
-
-};
