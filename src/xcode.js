@@ -6,8 +6,6 @@
 var _ = require('underscore');
 var R = require('ramda');
 
-
-
 /**
  * 柯里化函数
  * merge fun的处理结果 && 传入的结果对象
@@ -59,9 +57,20 @@ function parseUrl(url) {
     let fields = ['url', 'scheme', 'slash', 'host', 'port', 'path', 'query', 'hash'];
     let resultObj = {};
 
+    // 判断参数非法
+    if (result === null) {
+        throw Error('参数非法');
+    }
+
     _.each(fields, function (val, i) {
         resultObj[val] = result[i];
     });
+
+    // 兼容相对路径
+    if (resultObj.slash === '/' || resultObj.slash === '') {
+        resultObj.path = [resultObj.host, '/', resultObj.path].join('');
+        resultObj.host = undefined;
+    }
 
     return resultObj;
 }
